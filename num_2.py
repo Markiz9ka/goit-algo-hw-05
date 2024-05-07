@@ -1,7 +1,7 @@
 import re
 
 def generator_numbers(text):
-    pattern = r'\d+(\.\d+)?'
+    pattern = r"[ ]\d+[,.]\d\d[ ]"
     for value in re.finditer(pattern, text):
         yield value.group()
 
